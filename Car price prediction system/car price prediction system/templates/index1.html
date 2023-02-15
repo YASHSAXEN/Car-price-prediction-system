@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background-color: rgb(26, 192, 203);
+            background-size: cover;
+
+
+        }
+
+        .heading-1 {
+            text-align: center;
+            margin-top: 15px;
+            color: rgb(6, 6, 7);
+            text-decoration: underline;
+        }
+
+        .container {
+            margin-top: 30px;
+            text-align: center;
+
+        }
+
+        .form {
+            padding: 10px;
+            color: black;
+            font-size: large;
+            font-weight: 500;
+
+        }
+
+        .btn {
+
+            text-decoration: none;
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 7px 5px;
+            text-align: center;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 5px;
+            width: 200px;
+
+        }
+
+        .btn:hover {
+            background-color: rgb(16, 158, 197);
+            color: black;
+            cursor: pointer;
+        }
+
+        .output {
+            margin-left: -1px;
+            padding: inherit;
+        }
+
+        input {
+            border-radius: 5px;
+            border-style: groove;
+        }
+
+        #fname {
+            text-align: center;
+            width: 200px;
+            height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="heading-1">Car Price Prediction System</h1>
+
+    <div class="container">
+        <form class="form" action="/predict" , method="post">
+            <p><b> Enter Value in below field </b></p>
+            <input type="text" id="fname" name="value1" value="" required placeholder="Year"><br><br>
+            <input type="text" id="fname" name="value2" value="" required placeholder="Present_Price"><br><br>
+            <input type="text" id="fname" name="value3" value="" required placeholder="Kms_Driven"><br><br>
+            <input type="text" id="fname" name="value4" value="" required placeholder="Fuel_Type"><br><br>
+            <input type="text" id="fname" name="value5" value="" required placeholder="Seller_Type"><br><br>
+            <input type="text" id="fname" name="value6" value="" required placeholder="Transmission"><br><br>
+            <input type="text" id="fname" name="value7" value="" required placeholder="Owner"><br><br>
+            <button class="btn">Click to Result</button>
+            <h3 class="output">{{prediction_text}}</h3>
+        </form>
+    </div>
+</body>
+
+</html>
